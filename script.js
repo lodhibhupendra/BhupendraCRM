@@ -262,7 +262,7 @@ function initDownloadFunctions() {
     // Download buttons functionality
     window.downloadSoftware = function(platform) {
         const downloadUrls = {
-            'windows': 'BhupendraCRMwin.exe.zip',
+            'windows': 'BhupendraCRM.exe.zip',
             'macos': 'BhupendraCRM.zip',
             'linux': 'https://example.com/BhupendraCRM.AppImage'
         };
