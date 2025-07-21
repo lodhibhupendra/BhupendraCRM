@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BhupendraCRM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">BhupendraCRM</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <img src="logo.png" alt="BhupendraCRM Logo">
+                </div>
+                <span>BhupendraCRM</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#screenshots" class="nav-link">Screenshots</a></li>
+                <li><a href="#download" class="nav-link">Download</a></li>
+                <li><a href="#technology" class="nav-link">Technology</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-download-nav" onclick="scrollToSection('download')">
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Version 2.1.1 - Latest Release</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">BhupendraCRM</span>
+                    <br>
+                    <span class="typing-text" id="typingText"></span>
+                </h1>
+                <p class="hero-description">
+                    An advanced Customer Relationship Management system that completely transforms your call center operations. 
+                    Brings customer management, call tracking, payment processing and employee productivity to one powerful platform.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="10000">0</div>
+                        <div class="stat-label">Calls Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="99">0</div>
+                        <div class="stat-label">% Uptime</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('download')">
+                        <i class="fas fa-download"></i>
+                        <span>Free Download</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('features')">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Demo</span>
+                    </button>
+                    <button class="btn-outline" onclick="scrollToSection('screenshots')">
+                        <i class="fas fa-images"></i>
+                        <span>Screenshots</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-mockup">
+                    <div class="mockup-screen">
+                        <div class="screen-header">
+                            <div class="screen-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="screen-content">
+                            <div class="app-interface">
+                                <div class="app-sidebar">
+                                    <div class="sidebar-item active">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                </div>
+                                <div class="app-main">
+                                    <div class="dashboard-widgets">
+                                        <div class="widget">
+                                            <div class="widget-icon">
+                                                <i class="fas fa-user-plus"></i>
+                                            </div>
+                                            <div class="widget-content">
+                                                <div class="widget-number">127</div>
+                                                <div class="widget-label">New Customers</div>
+                                            </div>
+                                        </div>
+                                        <div class="widget">
+                                            <div class="widget-icon">
+                                                <i class="fas fa-phone-volume"></i>
+                                            </div>
+                                            <div class="widget-content">
+                                                <div class="widget-number">89</div>
+                                                <div class="widget-label">Active Calls</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span>Powerful Features</span>
+                </div>
+                <h2>Key Features</h2>
+                <p>Advanced features of BhupendraCRM that will completely transform your business</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>User Management</h3>
+                    <p>Secure authentication system with Admin and Employee roles. Role-based access control and comprehensive activity logging.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i>Multi-level user authentication</li>
+                        <li><i class="fas fa-check"></i>Role-based permissions</li>
+                        <li><i class="fas fa-check"></i>Activity tracking & logging</li>
+                        <li><i class="fas fa-check"></i>Session management</li>
+                    </ul>
+                    <div class="feature-badge">Security</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Customer Management</h3>
+                    <p>Complete customer lifecycle management from trial to paid customers. Detailed customer profiles and comprehensive history tracking.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i>Trial customer management</li>
+                        <li><i class="fas fa-check"></i>Paid customer tracking</li>
+                        <li><i class="fas fa-check"></i>Customer assignment system</li>
+                        <li><i class="fas fa-check"></i>Expiry notifications</li>
+                    </ul>
+                    <div class="feature-badge">Core</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Call Management</h3>
+                    <p>Comprehensive call tracking system with intelligent response categorization and automated follow-up scheduling.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i>Call response tracking</li>
+                        <li><i class="fas fa-check"></i>Callback scheduling</li>
+                        <li><i class="fas fa-check"></i>Follow-up management</li>
+                        <li><i class="fas fa-check"></i>Call notes & history</li>
+                    </ul>
+                    <div class="feature-badge">Communication</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Payment Processing</h3>
+                    <p>Complete payment management system with UTR tracking, multiple service types and detailed payment history.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i>Payment tracking</li>
+                        <li><i class="fas fa-check"></i>UTR verification</li>
+                        <li><i class="fas fa-check"></i>Service type management</li>
+                        <li><i class="fas fa-check"></i>Payment history</li>
+                    </ul>
+                    <div class="feature-badge">Finance</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Analytics & Reports</h3>
+                    <p>Comprehensive analytics dashboard with real-time performance metrics, sales targets and detailed productivity reports.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i>Performance analytics</li>
+                        <li><i class="fas fa-check"></i>Sales target tracking</li>
+                        <li><i class="fas fa-check"></i>Productivity reports</li>
+                        <li><i class="fas fa-check"></i>Real-time insights</li>
+                    </ul>
+                    <div class="feature-badge">Analytics</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Smart Notifications</h3>
+                    <p>Intelligent notification system for trial expiry, callbacks and important updates with customizable alerts.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i>Trial expiry alerts</li>
+                        <li><i class="fas fa-check"></i>Callback reminders</li>
+                        <li><i class="fas fa-check"></i>Payment notifications</li>
+                        <li><i class="fas fa-check"></i>System updates</li>
+                    </ul>
+                    <div class="feature-badge">Alerts</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>SMS Integration</h3>
+                    <p>Built-in SMS system for customer communication and team messaging with group chat capabilities.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i>Customer SMS</li>
+                        <li><i class="fas fa-check"></i>Team messaging</li>
+                        <li><i class="fas fa-check"></i>Group chats</li>
+                        <li><i class="fas fa-check"></i>SMS history</li>
+                    </ul>
+                    <div class="feature-badge">Communication</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Data Management</h3>
+                    <p>Robust database management with automated backup, export/import capabilities and advanced data integrity measures.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i>Automated data backup</li>
+                        <li><i class="fas fa-check"></i>Export/Import tools</li>
+                        <li><i class="fas fa-check"></i>Data validation</li>
+                        <li><i class="fas fa-check"></i>Security measures</li>
+                    </ul>
+                    <div class="feature-badge">Data</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-camera-retro"></i>
+                    <span>Interface Preview</span>
+                </div>
+                <h2>Screenshots</h2>
+                <p>Preview of BhupendraCRM's beautiful and intuitive interface</p>
+            </div>
+
+            <!-- Auto-scrolling screenshots gallery -->
+            <div class="auto-scroll-gallery" id="autoScrollGallery">
+                <img src="images/login.png" alt="Login Panel">
+                <img src="images/employeedaseh.png" alt="Employee Dashboard">
+                <img src="images/adminpenal.png" alt="Admin Panel">
+                <img src="images/employeepenal.png" alt="Customer Management">
+                <img src="images/agentpro.png" alt="Analytics Dashboard">
+                <img src="images/sms.png" alt="SMS Interface">
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-download"></i>
+                    <span>Get Started</span>
+                </div>
+                <h2>Download</h2>
+                <p>Download BhupendraCRM for free and transform your call center</p>
+            </div>
+            
+            <div class="download-options">
+                <div class="download-card featured">
+                    <div class="download-header">
+                        <div class="download-icon">
+                            <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+                                <rect x="2" y="7" width="19" height="15" fill="#0078D6"/>
+                                <rect x="2" y="26" width="19" height="15" fill="#0078D6"/>
+                                <rect x="23" y="7" width="23" height="15" fill="#0078D6"/>
+                                <rect x="23" y="26" width="23" height="15" fill="#0078D6"/>
+                            </svg>
+                        </div>
+                        <h3>Windows Version</h3>
+                        <div class="version-badge">v7.2.2</div>
+                    </div>
+                    <div class="download-content">
+                        <ul class="download-features">
+                            <li><i class="fas fa-check"></i>Windows 10/11 Compatible</li>
+                            <li><i class="fas fa-check"></i>Easy Installation</li>
+                            <li><i class="fas fa-check"></i>Auto Updates</li>
+                            <li><i class="fas fa-check"></i>Full Features</li>
+                        </ul>
+                        <div class="download-info">
+                            <div class="file-size">
+                                <i class="fas fa-file-archive"></i>
+                                <span>45.2 MB</span>
+                            </div>
+                            <div class="downloads-count">
+                                <i class="fas fa-download"></i>
+                                <span>1,247 downloads</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-actions">
+                        <button class="btn-download-primary" onclick="downloadSoftware('windows')">
+                            <i class="fas fa-download"></i>
+                            <span>Download for Windows</span>
+                        </button>
+                        <button class="btn-download-secondary" onclick="showRequirements('windows')">
+                            <i class="fas fa-info-circle"></i>
+                            <span>System Requirements</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-header">
+                        <div class="download-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h3>macOS Version</h3>
+                        <div class="version-badge">v7.2.2</div>
+                    </div>
+                    <div class="download-content">
+                        <ul class="download-features">
+                            <li><i class="fas fa-check"></i>macOS 10.15+ Compatible</li>
+                            <li><i class="fas fa-check"></i>Native Performance</li>
+                            <li><i class="fas fa-check"></i>Auto Updates</li>
+                            <li><i class="fas fa-check"></i>Full Features</li>
+                        </ul>
+                        <div class="download-info">
+                            <div class="file-size">
+                                <i class="fas fa-file-archive"></i>
+                                <span>52.8 MB</span>
+                            </div>
+                            <div class="downloads-count">
+                                <i class="fas fa-download"></i>
+                                <span>892 downloads</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-actions">
+                        <button class="btn-download-primary" onclick="downloadSoftware('macos')">
+                            <i class="fas fa-download"></i>
+                            <span>Download for macOS</span>
+                        </button>
+                        <button class="btn-download-secondary" onclick="showRequirements('macos')">
+                            <i class="fas fa-info-circle"></i>
+                            <span>System Requirements</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-header">
+                        <div class="download-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <h3>Linux Version</h3>
+                        <div class="version-badge">v2.1.1</div>
+                    </div>
+                    <div class="download-content">
+                        <ul class="download-features">
+                            <li><i class="fas fa-check"></i>Ubuntu 20.04+ Compatible</li>
+                            <li><i class="fas fa-check"></i>Command Line Install</li>
+                            <li><i class="fas fa-check"></i>Auto Updates</li>
+                            <li><i class="fas fa-check"></i>Full Features</li>
+                        </ul>
+                        <div class="download-info">
+                            <div class="file-size">
+                                <i class="fas fa-file-archive"></i>
+                                <span>48.5 MB</span>
+                            </div>
+                            <div class="downloads-count">
+                                <i class="fas fa-download"></i>
+                                <span>456 downloads</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-actions">
+                        <button class="btn-download-primary" onclick="downloadSoftware('linux')">
+                            <i class="fas fa-download"></i>
+                            <span>Download for Linux</span>
+                        </button>
+                        <button class="btn-download-secondary" onclick="showRequirements('linux')">
+                            <i class="fas fa-info-circle"></i>
+                            <span>System Requirements</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-extras">
+                <div class="extra-item">
+                    <div class="extra-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Documentation</h4>
+                    <p>Complete user guide and setup instructions</p>
+                    <button class="btn-extra" onclick="openDocumentation()">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Docs
+                    </button>
+                </div>
+
+                <div class="extra-item">
+                    <div class="extra-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h4>Video Tutorials</h4>
+                    <p>Step-by-step video guides</p>
+                    <button class="btn-extra" onclick="openTutorials()">
+                        <i class="fas fa-play"></i>
+                        Watch Videos
+                    </button>
+                </div>
+
+                <div class="extra-item">
+                    <div class="extra-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Support</h4>
+                    <p>24/7 technical support</p>
+                    <button class="btn-extra" onclick="openSupport()">
+                        <i class="fas fa-comments"></i>
+                        Get Help
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-code"></i>
+                    <span>Tech Stack</span>
+                </div>
+                <h2>Technology Stack</h2>
+                <p>Built using modern technologies to create a robust and scalable system</p>
+            </div>
+            
+            <div class="tech-grid">
+                    <div class="tech-card" data-aos="zoom-in">
+                        <div class="tech-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p>Powerful and reliable language for backend development. Fast execution and extensive libraries.</p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">3.11</span>
+                                <span class="stat-label">Version</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">Fast</span>
+                                <span class="stat-label">Performance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="tech-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>PyQt5</h3>
+                        <p>Modern and responsive desktop application framework. Cross-platform compatibility and rich UI components.</p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">5.15</span>
+                                <span class="stat-label">Version</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">Cross</span>
+                                <span class="stat-label">Platform</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="tech-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>MySQL</h3>
+                        <p>Robust and scalable database management system. ACID compliance and high performance.</p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">8.0</span>
+                                <span class="stat-label">Version</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">ACID</span>
+                                <span class="stat-label">Compliant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="tech-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Connection Pooling</h3>
+                        <p>Optimized database connections for better performance. Connection reuse and load balancing.</p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">Pool</span>
+                                <span class="stat-label">Size: 10</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">Fast</span>
+                                <span class="stat-label">Response</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="tech-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Security</h3>
+                        <p>Password hashing, session management and data encryption. Multi-layer security approach.</p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">SHA256</span>
+                                <span class="stat-label">Hashing</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">SSL</span>
+                                <span class="stat-label">Encryption</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="tech-icon">
+                            <i class="fas fa-mobile"></i>
+                        </div>
+                        <h3>SMS Integration</h3>
+                        <p>Real-time SMS capabilities for customer communication. API integration and message tracking.</p>
+                        <div class="tech-stats">
+                            <div class="stat">
+                                <span class="stat-value">Real</span>
+                                <span class="stat-label">Time</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">API</span>
+                                <span class="stat-label">Driven</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-card glass-effect">
+                <div class="contact-info">
+                    <h2>Contact Developer</h2>
+                    <p>Need a custom website or software? Talk directly to the developer!</p>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-user"></i> Bhupendra Lodhi</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:lodhibhupendra172@gmail.com">lodhibhupendra172@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:8435604063">8435604063</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Indore, India</li>
+                    </ul>
+                    <div class="contact-social">
+                        <a href="https://wa.me/918435604063" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:lodhibhupendra172@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" autocomplete="off">
+                    <h3>Contact Form</h3>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="logo.png" alt="BhupendraCRM Logo">
+                        </div>
+                        <span>BhupendraCRM</span>
+                    </div>
+                    <p>Professional Call Center Management System that takes your business to the next level. With modern technology and user-friendly interface.</p>
+                    <div class="footer-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-rocket"></i>
+                            <span>Fast</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-heart"></i>
+                            <span>Reliable</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Customer Management</li>
+                        <li>Call Tracking</li>
+                        <li>Payment Processing</li>
+                        <li>Analytics Dashboard</li>
+                        <li>SMS Integration</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#" onclick="openDocumentation()">Documentation</a></li>
+                        <li><a href="#" onclick="openTutorials()">Video Tutorials</a></li>
+                        <li><a href="#" onclick="openSupport()">Help Center</a></li>
+                        <li><a href="#" onclick="openFAQ()">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Get latest updates and features</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>&copy; 2025 BhupendraCRM. All rights reserved. | Version 2.1.1</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                <div class="footer-stats">
+                    <div class="stat">
+                        <span class="stat-number">2.1.1</span>
+                        <span class="stat-label">Latest Version</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5K+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal for System Requirements -->
+    <div class="modal" id="requirementsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>System Requirements</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="requirementsContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
